@@ -7,7 +7,7 @@
 
 
 - name: "deb | Download SmartGit's .deb file" 
-  get_url: url="{{ smartgit_deb_url }}" dest="{{ smartgit_deb_tmp }}"
+  get_url: url="{{ smartgit_deb_url }}" dest="{{ smartgit_deb_tmp }}" timeout="120"
   when: not smargit_bin.stat.exists
 
 
